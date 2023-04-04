@@ -96,7 +96,11 @@ export function CDKModal() {
   ];
   const login = () => {
     let cdkArray = cdkdb.filter((item) => item.cdk === CDK);
-    console.log(cdkArray);
+    alert(
+      `${cdkArray.length}, ${
+        cdkArray[0].time
+      }, ${new Date().getTime()}, ${new Date(cdkArray[0].time).getTime()}`,
+    );
     if (
       cdkArray.length > 0 &&
       new Date(cdkArray[0].time).getTime() > new Date().getTime()
