@@ -4085,9 +4085,9 @@ export function CDKModal() {
   const login = () => {
     let cdkArray = cdkdb.filter((item) => item.cdk === CDK);
     alert(
-      `${cdkArray.length}, ${
-        cdkArray[0].time
-      }, ${new Date().getTime()}, ${new Date(cdkArray[0].time).getTime()}`,
+      `${JSON.stringify(cdkArray)}${JSON.stringify(
+        cdkArray[0],
+      )}${JSON.stringify(cdkArray[0].time)}`,
     );
     if (
       cdkArray.length > 0 &&
